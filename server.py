@@ -66,7 +66,7 @@ def add_address():
     if address:
         if address not in addresses:
             temp_address = Address(address)
-            success, message = temp_address.sync_transactions()
+            success, _ = temp_address.sync_transactions()
             if success:
                 addresses[address] = temp_address
                 return jsonify({'message': 'Address added and synchronized successfully'}), 201

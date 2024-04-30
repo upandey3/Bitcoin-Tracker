@@ -57,7 +57,7 @@ The server will start on http://127.0.0.1:5000.
 
 To run the frontend, run:
 ```
-npm build (the first time)
+npm install (the first time)
 npm start
 ```
 
