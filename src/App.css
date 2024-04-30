@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Roboto Slab", serif;
+  background-color: #212426;
+  color: #a1a1a1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  padding: 4rem;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+}
+
+.search {
+  width: 71%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 2rem;
+  background: #1f2123;
+  border-radius: 3rem;
+  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
 }
 
-.App-link {
-  color: #61dafb;
+.search input {
+  flex: 1;
+  font-size: 1.5rem;
+  font-family: "Raleway", sans-serif;
+  outline: none;
+  border: none;
+  background: none;
+  color: #a1a1a1;
+  padding: 1.5rem 1.75rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.25rem;
+  color: #a1a1a1;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  border-radius: 3rem;
+  background: #1f2123;
+  cursor: pointer;
+  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: #1f2123;
+  color: #f9d3b4;
+  border-radius: 10px;
+  overflow: hidden;
+  table-layout: fixed; /* Ensure even distribution of table columns */
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+th {
+  background-color: #343739;
+  color: #ffffff;
+}
+
+tr:hover {
+  background-color: #2a2d2f;
+}
+
+thead tr {
+  background-color: #2a2d2f;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    font-size: 0.8rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  th, td {
+    padding: 6px;
   }
 }
